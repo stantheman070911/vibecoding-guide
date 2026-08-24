@@ -1,10 +1,6 @@
 # The Notes
 
-## Here are the skills I use
-
-Grouped by where they actually come from — checked against `~/.claude/plugins/installed_plugins.json` and `~/.claude/skills/` on disk, not just guessed from the name.
-
-### Built-in (ships with Claude Code — not installed, can't be removed)
+## Skills I use
 
 **Claude Code / config**
 - update-config, keybindings-help, fewer-permission-prompts, init, run, claude-api
@@ -18,33 +14,29 @@ Grouped by where they actually come from — checked against `~/.claude/plugins/
 **Artifacts & data viz**
 - artifact-design, artifact-diagramming, artifact-capabilities, dataviz, design (Claude Design canvas)
 
-**Anthropic-authored document/office skills**
-- anthropic-skills:docx, anthropic-skills:pptx, anthropic-skills:xlsx, anthropic-skills:pdf
+**Document/office**
+- docx, pptx, xlsx, pdf
 
-**Anthropic-authored misc**
-- anthropic-skills:consolidate-memory, anthropic-skills:explain-usage, anthropic-skills:import-memory, anthropic-skills:morning, anthropic-skills:schedule, anthropic-skills:setup-cowork, anthropic-skills:setup-writing-style, anthropic-skills:skill-creator
-
-### Installed via plugin marketplace (tracked in `~/.claude/plugins/installed_plugins.json`)
+**Anthropic misc**
+- consolidate-memory, explain-usage, import-memory, morning, schedule, setup-cowork, setup-writing-style, skill-creator
 
 **Vercel**
-- vercel:bootstrap, vercel:deploy, vercel:env, vercel:marketplace, vercel:status, vercel:ai-gateway, vercel:ai-sdk, vercel:auth, vercel:chat-sdk, vercel:deployments-cicd, vercel:env-vars, vercel:knowledge-update, vercel:microfrontends, vercel:next-cache-components, vercel:next-forge, vercel:next-upgrade, vercel:nextjs, vercel:react-best-practices, vercel:routing-middleware, vercel:runtime-cache, vercel:shadcn, vercel:turbopack, vercel:vercel-agent, vercel:vercel-cli, vercel:vercel-connect, vercel:vercel-firewall, vercel:vercel-functions, vercel:vercel-sandbox, vercel:vercel-storage, vercel:verification, vercel:workflow
+- bootstrap, deploy, env, marketplace, status, ai-gateway, ai-sdk, auth, chat-sdk, deployments-cicd, env-vars, knowledge-update, microfrontends, next-cache-components, next-forge, next-upgrade, nextjs, react-best-practices, routing-middleware, runtime-cache, shadcn, turbopack, vercel-agent, vercel-cli, vercel-connect, vercel-firewall, vercel-functions, vercel-sandbox, vercel-storage, verification, workflow
 
 **Context7 (docs)**
-- context7-plugin:context7, context7-plugin:docs, context7-plugin:context7-mcp, context7-plugin:docs-researcher (agent)
+- context7, docs, context7-mcp, docs-researcher (agent)
 
 **Superpowers (workflow/process)**
-- superpowers:brainstorming, superpowers:dispatching-parallel-agents, superpowers:executing-plans, superpowers:finishing-a-development-branch, superpowers:receiving-code-review, superpowers:requesting-code-review, superpowers:subagent-driven-development, superpowers:systematic-debugging, superpowers:test-driven-development, superpowers:using-git-worktrees, superpowers:using-superpowers, superpowers:verification-before-completion, superpowers:writing-plans, superpowers:writing-skills
+- brainstorming, dispatching-parallel-agents, executing-plans, finishing-a-development-branch, receiving-code-review, requesting-code-review, subagent-driven-development, systematic-debugging, test-driven-development, using-git-worktrees, using-superpowers, verification-before-completion, writing-plans, writing-skills
 
 **UI/UX**
-- ui-ux-pro-max:ui-ux-pro-max
+- ui-ux-pro-max
 
 **Ponytail** — forces the simplest/laziest solution that still works; question whether code needs to exist at all before writing it
 - ponytail, ponytail-review, ponytail-audit, ponytail-gain, ponytail-debt, ponytail-help
 
 **Impeccable** — design fluency for frontend work: polish, audit, critique, animate, and 23 total commands for UI quality (`/impeccable polish`, `/impeccable audit`, etc.)
 - impeccable
-
-### Installed via skills manager (symlinked or copied into `~/.claude/skills` from `~/.agents/skills`)
 
 **Animation & Motion**
 - animate, animate-expo, animation-vocabulary, apple-design, find-animation-opportunities, improve-animations, review-animations, gsap-core, gsap-frameworks, gsap-performance, gsap-plugins, gsap-react, gsap-scrolltrigger, gsap-timeline, gsap-utils
@@ -67,13 +59,13 @@ Grouped by where they actually come from — checked against `~/.claude/plugins/
 **Swift**
 - write-swift
 
-### Installed via dedicated tool installer (own version tracking, not the plugin system or the generic skills manager)
-- graphify — turns any input (code, docs, papers, images, videos) into a persistent knowledge graph with god nodes, community detection, and query/path/explain tools. Tracked via its own `.graphify_version` file (currently 0.9.49).
+**graphify** — turns any input (code, docs, papers, images, videos) into a persistent knowledge graph with god nodes, community detection, and query/path/explain tools
 
-### Manually installed (dropped straight into `~/.claude/skills`, no package manager tracking)
-- eli5 — explains any topic, code, or error tailored to a specific audience (age, grade level, job role, or relationship). Source: [DreambigOu/ELI5](https://github.com/DreambigOu/ELI5)
+**eli5** — explains any topic, code, or error tailored to a specific audience (age, grade level, job role, or relationship). Source: [DreambigOu/ELI5](https://github.com/DreambigOu/ELI5)
 
 ## Writing tips for an AI
+
+Notes I give AI tools when asking them to write or edit prose, kept in the language I originally wrote them in (Traditional Chinese).
 
 # 核心撰寫原則
 
@@ -134,6 +126,8 @@ Grouped by where they actually come from — checked against `~/.claude/plugins/
 **寫需要寫的，不寫不需要寫的；知道的說清楚，不知道的不要補。**
 
 ## Scope Deletion
+
+A rule I give AI coding/writing tools for how to handle content I ask them to remove, so a one-time deletion doesn't quietly turn into a new standing instruction.
 
 Do not confuse **state modification** with **instruction accumulation**.
 

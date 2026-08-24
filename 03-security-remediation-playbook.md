@@ -1,10 +1,12 @@
-> # **Part 3: Security Remediation Playbook**
+# Part 3: Security Remediation Playbook
 
-Detailed, actionable guidance for the highest-risk items in the checklist above. Each entry lists the risk, the fix approach, and a verification checklist. Severity follows the same scale used elsewhere in this document: 🚨 Critical, 🔴 High, 🟠 Medium.
+Detailed, actionable guidance for the highest-risk items in [Part 2](02-website-production-readiness-checklist.md)'s checklist. Each entry lists the risk, the fix approach, and a verification checklist.
 
-> ## **Authentication & Authorization**
+Severity legend: 🚨 Critical (fix before shipping) · 🔴 High (fix soon after) · 🟠 Medium (schedule it). These map onto Part 2's P0/P1/P2 scale — 🚨 and 🔴 items here are P0.
 
-> ### **1\. Client-Side Authentication — 🚨 Critical**
+## Authentication & Authorization
+
+### 1. Client-Side Authentication — 🚨 Critical
 
 If the login check runs in browser JavaScript, any user can read the source and bypass it. Authentication logic belongs on the server; the client should receive only a session token after the server verifies credentials.
 
@@ -20,7 +22,7 @@ If the login check runs in browser JavaScript, any user can read the source and 
 * \[ \] No role/permission checks in browser code  
 * \[ \] Auth logic moved to server/backend
 
-> ### **2\. Missing Authorization Checks (IDOR) — 🚨 Critical**
+### 2. Missing Authorization Checks (IDOR) — 🚨 Critical
 
 Being logged in doesn't mean access to everything. Every endpoint that returns data must verify the requester owns or is permitted to access that specific resource.
 
@@ -36,7 +38,7 @@ Being logged in doesn't mean access to everything. Every endpoint that returns d
 * \[ \] IDs are not guessable/sequential without access control  
 * \[ \] Server validates the user–resource relationship on every request
 
-> ### **3\. Broken Access Controls — 🚨 Critical**
+### 3. Broken Access Controls — 🚨 Critical
 
 Authenticated users should only be able to modify or delete resources they own. Without this, any logged-in attacker can corrupt another user's data.
 
@@ -52,7 +54,7 @@ Authenticated users should only be able to modify or delete resources they own. 
 * \[ \] Admin-only routes are protected by role checks  
 * \[ \] No resource can be modified by an unauthorized user
 
-> ### **4\. Weak Session Handling — 🔴 High**
+### 4. Weak Session Handling — 🔴 High
 
 Sessions must be cryptographically secure, expire properly, and be invalidated on logout.
 
@@ -69,7 +71,7 @@ Sessions must be cryptographically secure, expire properly, and be invalidated o
 * \[ \] Logout invalidates the session server-side  
 * \[ \] Tokens transmitted only over HTTPS
 
-> ### **5\. Authentication Bypass Paths — 🚨 Critical**
+### 5. Authentication Bypass Paths — 🚨 Critical
 
 Routes that skip authentication entirely — often created by accident — let anyone reach protected functionality without logging in.
 
@@ -85,9 +87,9 @@ Routes that skip authentication entirely — often created by accident — let a
 * \[ \] No accidental public routes to private resources  
 * \[ \] Auth middleware cannot be bypassed via URL tricks
 
-> ## **Secrets & Keys**
+## Secrets & Keys
 
-> ### **6\. Hard-Coded Credentials — 🚨 Critical**
+### 6. Hard-Coded Credentials — 🚨 Critical
 
 Passwords, database connection strings, and secrets embedded in source code get committed to git and leaked permanently.
 
@@ -104,7 +106,7 @@ Passwords, database connection strings, and secrets embedded in source code get 
 * \[ \] All secrets loaded from environment variables  
 * \[ \] `.env` is in `.gitignore`
 
-> ### **7\. Exposed API Keys in Client-Side Code — 🚨 Critical**
+### 7. Exposed API Keys in Client-Side Code — 🚨 Critical
 
 Any key shipped in the frontend bundle is public — anyone can open DevTools and take it.
 
@@ -120,9 +122,9 @@ Any key shipped in the frontend bundle is public — anyone can open DevTools an
 * \[ \] External API calls proxied through backend  
 * \[ \] Keys only in server-side environment variables
 
-> ## **Injection Vulnerabilities**
+## Injection Vulnerabilities
 
-> ### **8\. SQL Injection (SQLi) — 🚨 Critical**
+### 8. SQL Injection (SQLi) — 🚨 Critical
 
 Concatenating user input into SQL queries lets attackers read, modify, or delete the entire database.
 
@@ -138,7 +140,7 @@ Concatenating user input into SQL queries lets attackers read, modify, or delete
 * \[ \] No string concatenation with user input in SQL  
 * \[ \] Database user has minimal required permissions
 
-> ### **9\. Cross-Site Scripting (XSS) — 🔴 High**
+### 9. Cross-Site Scripting (XSS) — 🔴 High
 
 Rendering unescaped user input in HTML lets attackers inject scripts that steal cookies, hijack sessions, or deface the app.
 
@@ -155,7 +157,7 @@ Rendering unescaped user input in HTML lets attackers inject scripts that steal 
 * \[ \] Server-rendered content is escaped  
 * \[ \] CSP headers configured
 
-> ### **10\. Command Injection — 🚨 Critical**
+### 10. Command Injection — 🚨 Critical
 
 Passing user input to shell commands lets attackers run arbitrary code on the server.
 
@@ -171,9 +173,9 @@ Passing user input to shell commands lets attackers run arbitrary code on the se
 * \[ \] Child processes use argument arrays, not string interpolation  
 * \[ \] Shell calls replaced with native library alternatives where possible
 
-> ## **Data Storage & Handling**
+## Data Storage & Handling
 
-> ### **11\. Insecure Client-Side Storage — 🔴 High**
+### 11. Insecure Client-Side Storage — 🔴 High
 
 `localStorage` and `sessionStorage` are readable by any JavaScript on the page, including injected scripts — sensitive tokens don't belong there.
 
@@ -189,7 +191,7 @@ Passing user input to shell commands lets attackers run arbitrary code on the se
 * \[ \] Sensitive data not in `sessionStorage`  
 * \[ \] Auth tokens use `httpOnly`, `Secure` cookies
 
-> ### **12\. Weak Password Storage — 🚨 Critical**
+### 12. Weak Password Storage — 🚨 Critical
 
 Plain-text passwords or MD5/SHA-1 hashes are trivially cracked. Use bcrypt, Argon2, or scrypt.
 
@@ -205,7 +207,7 @@ Plain-text passwords or MD5/SHA-1 hashes are trivially cracked. Use bcrypt, Argo
 * \[ \] No plain text passwords in database  
 * \[ \] No MD5/SHA-1 password hashing
 
-> ### **13\. Sensitive Data in URLs and Logs — 🟠 Medium**
+### 13. Sensitive Data in URLs and Logs — 🟠 Medium
 
 Tokens or passwords in URLs end up in browser history and server/CDN logs; credentials in log statements persist for months.
 
@@ -221,9 +223,9 @@ Tokens or passwords in URLs end up in browser history and server/CDN logs; crede
 * \[ \] Log statements sanitize sensitive fields  
 * \[ \] Error messages don't expose stack traces or internal data to users
 
-> ## **Security Headers & Protections**
+## Security Headers & Protections
 
-> ### **14\. Missing Security Headers — 🟠 Medium**
+### 14. Missing Security Headers — 🟠 Medium
 
 HSTS, CSP, X-Frame-Options, and a few others take under an hour to add and close a meaningful number of attack vectors. Most vibe-coded apps ship without any of them.
 
@@ -241,7 +243,7 @@ HSTS, CSP, X-Frame-Options, and a few others take under an hour to add and close
 * \[ \] X-Content-Type-Options set  
 * \[ \] Referrer-Policy set
 
-> ### **15\. No CSRF Protection — 🔴 High**
+### 15. No CSRF Protection — 🔴 High
 
 Without CSRF protection, a malicious website can trigger authenticated requests to the app on a logged-in user's behalf.
 
@@ -257,7 +259,7 @@ Without CSRF protection, a malicious website can trigger authenticated requests 
 * \[ \] CSRF tokens validated server-side  
 * \[ \] `SameSite=Strict` or `Lax` on session cookies
 
-> ### **16\. Missing Rate Limiting — 🔴 High**
+### 16. Missing Rate Limiting — 🔴 High
 
 Without rate limiting, attackers can brute-force passwords, enumerate users, or abuse the API indefinitely.
 
@@ -274,9 +276,9 @@ Without rate limiting, attackers can brute-force passwords, enumerate users, or 
 * \[ \] Public API endpoints rate limited  
 * \[ \] Proper 429 responses returned
 
-> ## **Dependencies & Supply Chain**
+## Dependencies & Supply Chain
 
-> ### **17\. Hallucinated Packages — 🔴 High**
+### 17. Hallucinated Packages — 🔴 High
 
 AI models sometimes suggest package names that don't exist. Attackers register those names with malicious code, and the install picks it up.
 
@@ -292,7 +294,7 @@ AI models sometimes suggest package names that don't exist. Attackers register t
 * \[ \] Package names double-checked for typosquatting  
 * \[ \] No AI-suggested packages installed without verification
 
-> ### **18\. Outdated Libraries with Known CVEs — 🔴 High**
+### 18. Outdated Libraries with Known CVEs — 🔴 High
 
 Outdated dependencies are the most common entry point for real-world attacks.
 
@@ -308,7 +310,7 @@ Outdated dependencies are the most common entry point for real-world attacks.
 * \[ \] Automated dependency update alerts configured  
 * \[ \] Lock files committed and up to date
 
-> ### **19\. Insecure Deserialization — 🔴 High**
+### 19. Insecure Deserialization — 🔴 High
 
 Deserializing untrusted data (especially Python pickle, Java serialization) can execute arbitrary code.
 
@@ -325,7 +327,7 @@ Deserializing untrusted data (especially Python pickle, Java serialization) can 
 * \[ \] No untrusted data passed to deserializers  
 * \[ \] User-supplied data validated against a schema before processing
 
-> ## **Advanced Hardening (Mature-Stage Layer)**
+## Advanced Hardening (Mature-Stage Layer)
 
 A further layer of controls, worth adding once the base playbook above is covered and the product has matured past early-stage risk:
 
@@ -340,6 +342,6 @@ A further layer of controls, worth adding once the base playbook above is covere
 * Session tokens are bound to a device fingerprint, not just the token itself  
 * The CI/CD pipeline scans for secrets before every commit gets merged
 
-> ## **Additional Vulnerability Classes to Audit**
+## Additional Vulnerability Classes to Audit
 
 Beyond the detailed entries above, also check for: cross-site scripting, cross-site request forgery, insecure file uploads, path traversal vulnerabilities, server-side request forgery, broken password reset flows, weak session management, vulnerable JWT secrets, overly permissive CORS, missing rate limits, exposed test or staging environments, default credentials left unchanged, webhook endpoints without signature verification, payment or subscription checks done only on the front end, IDOR and role escalation, API endpoints trusting user-controlled input, logs containing sensitive information, and exposed source maps.

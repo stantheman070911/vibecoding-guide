@@ -1,8 +1,8 @@
-> # **Part 1: Stack Decision**
+# Part 1: Stack Decision
 
 > **Executive conclusion.** The current stack is already strong. The better optimization is consolidation: keep the systems that compound development velocity, remove overlapping services, and treat Redis, dedicated vector search, deep observability, and dedicated feedback tooling as optional layers rather than defaults.
 
-> ## **1\. Recommended core stack**
+## 1. Recommended core stack
 
 This is the default stack worth shipping and scaling a serious SaaS on, before introducing additional infrastructure.
 
@@ -17,7 +17,7 @@ This is the default stack worth shipping and scaling a serious SaaS on, before i
 | DNS / edge | **Cloudflare** | DNS, CDN/security controls, edge services, and optional registrar. |
 | Product analytics | **PostHog** | Analytics, replay, flags, experiments — enough observability for many early-stage products. |
 
-> ## **2\. What to remove from the default stack**
+## 2. What to remove from the default stack
 
 **Pinecone → Supabase pgvector.** For a normal SaaS with RAG, semantic search, or embeddings, keeping vectors inside Postgres is simpler. It avoids dual writes, metadata synchronization, deletion synchronization, and another network dependency. Introduce Pinecone only when retrieval is a core workload and pgvector is demonstrably the bottleneck.
 
@@ -27,7 +27,7 @@ This is the default stack worth shipping and scaling a serious SaaS on, before i
 
 **Namecheap → optional.** Because Cloudflare already handles DNS, registrar consolidation is convenient. Keeping the registrar separate is also defensible as an account-separation/security choice — this is an operational preference, not a technical requirement.
 
-> ## **3\. Services that should be demand-driven**
+## 3. Services that should be demand-driven
 
 | Service | Add it when… | Default position |
 | ----- | ----- | ----- |
@@ -38,7 +38,7 @@ This is the default stack worth shipping and scaling a serious SaaS on, before i
 | **Cloudflare R2** | Large public files, substantial media bandwidth, or object-storage economics justify it. | Use Supabase Storage first. |
 | **Clerk** | Organizations, team invites, sophisticated B2B RBAC, or auth UX are strategically important. | Use Supabase Auth otherwise. |
 
-> ## **4\. Architecture doctrine**
+## 4. Architecture doctrine
 
 * Prefer one system of record. Postgres should own durable application data wherever practical.  
 * Do not introduce a specialist database until the general-purpose database fails a measured requirement.  
@@ -47,7 +47,7 @@ This is the default stack worth shipping and scaling a serious SaaS on, before i
 * Optimize for reversibility. A boring, portable Postgres-centered architecture is usually preferable to an elegant proprietary abstraction.  
 * Every vendor has a carrying cost: SDKs, secrets, webhooks, billing, outages, permissions, monitoring, and data synchronization.
 
-> ## **5\. Background jobs: the one capability to plan deliberately**
+## 5. Background jobs: the one capability to plan deliberately
 
 Async execution is more important than another database. Typical workloads include Stripe webhook processing, emails, embedding generation, file conversion, scheduled cleanup, external syncs, and long-running AI tasks.
 
@@ -58,7 +58,7 @@ Async execution is more important than another database. Typical workloads inclu
 | Long-running application or AI workflow | **Vercel Workflows** |
 | Cache / rate limiting / ephemeral state | **Upstash Redis** |
 
-> ## **6\. Final stack**
+## 6. Final stack
 
 **Core — ship with this**
 
