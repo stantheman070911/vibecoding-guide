@@ -38,6 +38,12 @@ Grouped by where they actually come from — checked against `~/.claude/plugins/
 **UI/UX**
 - ui-ux-pro-max:ui-ux-pro-max
 
+**Ponytail** — forces the simplest/laziest solution that still works; question whether code needs to exist at all before writing it
+- ponytail, ponytail-review, ponytail-audit, ponytail-gain, ponytail-debt, ponytail-help
+
+**Impeccable** — design fluency for frontend work: polish, audit, critique, animate, and 23 total commands for UI quality (`/impeccable polish`, `/impeccable audit`, etc.)
+- impeccable
+
 ### Installed via skills manager (symlinked or copied into `~/.claude/skills` from `~/.agents/skills`)
 
 **Animation & Motion**
@@ -60,6 +66,9 @@ Grouped by where they actually come from — checked against `~/.claude/plugins/
 
 **Swift**
 - write-swift
+
+### Installed via dedicated tool installer (own version tracking, not the plugin system or the generic skills manager)
+- graphify — turns any input (code, docs, papers, images, videos) into a persistent knowledge graph with god nodes, community detection, and query/path/explain tools. Tracked via its own `.graphify_version` file (currently 0.9.49).
 
 ### Manually installed (dropped straight into `~/.claude/skills`, no package manager tracking)
 - eli5 — explains any topic, code, or error tailored to a specific audience (age, grade level, job role, or relationship). Source: [DreambigOu/ELI5](https://github.com/DreambigOu/ELI5)
