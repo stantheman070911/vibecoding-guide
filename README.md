@@ -11,6 +11,7 @@ This repo won't teach you how to prompt a model. It's the stuff that comes *afte
 3. [Security Remediation Playbook](03-security-remediation-playbook.md) — fixes for the most common vulnerabilities AI-generated code introduces, from exposed API keys to missing authorization checks.
 4. [How to Not Look AI-Generated](04-how-to-not-look-ai-generated.md) — a designer's guide to keeping authorship and a point of view in AI-assisted design work.
 5. [The Notes](05-the-notes.md) — my running personal notes and opinions. Less polished than the rest, updated as I learn.
+6. [The Holy Trinity + 1](the%20holy%20trinity+1/) — reusable CONSTITUTION/BRIEF/PLAN/LOG (+ RUNBOOK) documentation templates for keeping an AI coding agent aligned across a project's lifetime.
 
 ## Contributing
 
