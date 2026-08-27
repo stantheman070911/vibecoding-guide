@@ -63,6 +63,8 @@
 
 **eli5** — explains any topic, code, or error tailored to a specific audience (age, grade level, job role, or relationship). Source: [DreambigOu/ELI5](https://github.com/DreambigOu/ELI5)
 
+**open-slide** — CLI (not a skill) that scaffolds a slides workspace with Claude Code skills preconfigured. Installed globally via `npm install -g @open-slide/cli`; run `npx @open-slide/cli init <name>` to scaffold a new workspace. [open-slide.dev](https://open-slide.dev)
+
 ## Writing tips for an AI
 
 Notes I give AI tools when asking them to write or edit prose, kept in the language I originally wrote them in (Traditional Chinese).
