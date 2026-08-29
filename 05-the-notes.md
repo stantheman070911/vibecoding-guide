@@ -38,6 +38,9 @@
 **Impeccable** — design fluency for frontend work: polish, audit, critique, animate, and 23 total commands for UI quality (`/impeccable polish`, `/impeccable audit`, etc.)
 - impeccable
 
+**Sepia** — de-AI writing: makes AI-generated text read as human-written. Narrative-architecture repair for fiction (StoryScope, arXiv:2604.03136) plus domain modes for release notes, PR/issue replies, postmortems, tickets, and technical articles. Write, review, refactor, recreate. Source: [Nanako0129/sepia](https://github.com/Nanako0129/sepia)
+- sepia
+
 **Animation & Motion**
 - animate, animate-expo, animation-vocabulary, apple-design, find-animation-opportunities, improve-animations, review-animations, gsap-core, gsap-frameworks, gsap-performance, gsap-plugins, gsap-react, gsap-scrolltrigger, gsap-timeline, gsap-utils
 
