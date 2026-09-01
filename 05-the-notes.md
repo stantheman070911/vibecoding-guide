@@ -143,3 +143,239 @@ A deletion must not become a constraint. A correction must not leak into the art
 除非明確要求保留紀錄，否則不得將刪除或修正轉化為規則、negative constraint、警告、註解、版本說明或其他 meta-language。
 
 **Deletion is not prohibition. Correction should leave no residue.**
+
+
+## CLAUDE.md preset
+
+@AGENTS.md
+
+# Rules for Coding
+
+## Prime Directive
+
+**There is nothing so useless as doing efficiently that which should not be done at all.**
+
+Before optimizing execution, confirm that the proposed work is necessary, appropriate, and aligned with the actual objective.
+
+## 1. Read Before You Write
+
+Inspect the relevant files, code, configuration, documentation, and surrounding context before making changes.
+
+Do not modify code you have not first understood in context.
+
+## 2. Understand Before You Modify
+
+Determine what the existing system does, why it behaves that way, and what constraints it operates under before proposing a change.
+
+Do not treat symptoms without understanding the underlying behavior.
+
+## 3. State Assumptions Explicitly
+
+When information is uncertain or incomplete, state the assumption being made before acting on it.
+
+Do not silently convert uncertainty into fact.
+
+## 4. Do Not Invent Architecture
+
+Work with the architecture that actually exists.
+
+Do not fabricate abstractions, services, interfaces, dependencies, conventions, or future requirements that are not supported by the repository or the task.
+
+## 5. Prefer the Smallest Correct Change
+
+Make the simplest change that fully solves the problem.
+
+Minimize affected files, dependencies, abstractions, and behavioral surface area. Complexity requires justification.
+
+## 6. Do Not Refactor for Display
+
+Do not rewrite, restructure, generalize, or modernize unrelated code merely to demonstrate sophistication.
+
+Refactoring is justified only when it materially improves the requested change, correctness, maintainability, or safety.
+
+## 7. Every Change Must Be Explainable
+
+Each meaningful action should have a clear reason tied to evidence, requirements, or an identified problem.
+
+If a change cannot be explained simply, reconsider whether it should be made.
+
+## 8. Verify the Result, Not Just the Edit
+
+After making changes, inspect the resulting behavior and output.
+
+Do not assume that syntactically valid code or a successful edit means the task is complete.
+
+## 9. Test Before Delivery
+
+Run the relevant tests, checks, builds, linters, type checks, or validation commands before declaring the work complete.
+
+If verification cannot be performed, state exactly what was not verified and why.
+
+## 10. Learn From Repeated Failures
+
+When the same class of error occurs more than once, record the lesson and adjust the approach so it is not repeated.
+
+Repeated mistakes should produce durable improvements in reasoning, process, tests, or documentation.
+
+## 11. Preserve What Does Not Need to Change
+
+Treat existing working behavior as a constraint.
+
+Avoid unrelated edits and preserve established interfaces, conventions, and behavior unless changing them is necessary to accomplish the task.
+
+## 12. Completion Requires Evidence
+
+A task is complete only when:
+
+* the relevant context was inspected;
+* the requested change was implemented;
+* assumptions and limitations are explicit;
+* unnecessary scope was avoided;
+* the resulting behavior was verified; and
+* relevant tests or checks were run successfully, or any inability to run them was clearly disclosed.
+
+**Default operating principle: understand first, change minimally, verify rigorously.**
+
+## Copywriting Guide
+
+### Copywriting Notes
+
+**1. The offer carries the sale**
+
+Gary Halbert: "Your offer is by far the most important element in the entire sales message."
+
+A strong message cannot rescue a weak offer. Before refining the copy, make sure the offer itself is compelling:
+
+* What does the buyer receive?
+* Why is it valuable now?
+* Why is it better, safer, easier, or more distinctive than the alternatives?
+* What reduces their risk or increases urgency?
+
+Practical rule: Improve the offer before spending hours polishing the wording.
+
+**2. Call out the right market immediately**
+
+Eugene Schwartz: Call your market into the headline.
+
+The reader should quickly feel: "This is for me." Use the headline to identify the audience, situation, problem, or aspiration.
+
+Example:
+Instead of: "A Better Way to Build Your Business"
+Write: "For Independent Consultants Who Want More Qualified Leads Without Posting Every Day"
+
+Practical rule: Specific relevance earns attention.
+
+**3. Make the outcome more valuable and believable**
+
+Alex Hormozi: Increase the dream outcome and the perceived likelihood of achieving it; decrease time delay and effort.
+
+People evaluate an offer through four questions:
+
+1. What result do I get?
+2. How likely is it to work for me?
+3. How long will it take?
+4. How much effort, sacrifice, or risk will it require?
+
+Practical rule: Strengthen the desired result, make proof visible, shorten the path, and remove unnecessary work.
+
+**4. Write for the customer, not for yourself**
+
+Jim Edwards: Nobody cares about you in your sales copy.
+
+Customers care about their own problems, desires, risks, and identity. Company history, credentials, and features matter only when they clearly help the reader get what they want.
+
+Weak: "We have developed an innovative, proprietary solution."
+Better: "Get a clear weekly plan for finding clients, without guessing what to post or whom to contact."
+
+Practical rule: Turn every "we" statement into a reason the customer should care.
+
+**5. Use bullets to create curiosity**
+
+Gary Halbert: Reveal enough to create desire, but not enough to satisfy curiosity.
+
+A bullet should present a compelling benefit, unexpected insight, or intriguing mechanism—then leave the reader wanting the explanation.
+
+Example:
+"The simple 'two-question' follow-up that turns silent prospects into booked calls—without sounding desperate."
+
+Practical rule: A bullet should make the reader want the next sentence, the next section, or the product itself.
+
+**6. Specific facts beat vague adjectives**
+
+David Ogilvy: Specific facts beat vague adjectives.
+
+Words such as "amazing," "revolutionary," "premium," and "powerful" are usually weak unless supported by a fact.
+
+Weak: "A powerful system for improving conversion."
+Better: "A five-email sequence designed to recover abandoned leads within 72 hours."
+
+Practical rule: Replace broad praise with numbers, names, time frames, steps, examples, or concrete outcomes.
+
+**7. Respect the reader's intelligence**
+
+David Ogilvy: The customer is intelligent. Write like you respect them.
+
+Do not rely on exaggerated claims, empty hype, or simplistic manipulation. Explain the logic, provide evidence, and let the reader reach a confident conclusion.
+
+Practical rule: Make bold claims only when you can make them credible.
+
+**8. Differentiate through the mechanism**
+
+Eugene Schwartz: When every competitor makes the same promise, change the mechanism.
+
+In crowded markets, everyone claims to save time, increase revenue, improve confidence, or create results. The differentiator is often how your solution produces that result.
+
+Example:
+Generic promise: "Lose weight without giving up your favorite foods."
+Distinct mechanism: "Use a high-satiety meal framework that reduces cravings before willpower becomes necessary."
+
+Practical rule: Do not merely promise a better result. Explain the distinctive path that makes it possible.
+
+**9. Treat the headline as the highest-leverage line**
+
+John Caples: If you create a good headline, your task is more than half completed.
+
+The headline determines whether the rest of the message gets read. It should earn attention through relevance, clarity, specificity, curiosity, or a strong promise.
+
+A useful headline often includes:
+
+* A desired outcome
+* A defined audience
+* A problem or obstacle
+* A unique mechanism
+* A credible time frame or qualifier
+
+Practical rule: Write multiple headline options before settling on one. The first headline is rarely the strongest.
+
+**10. Sell the transformation, not the object**
+
+Tony Robbins: People do not buy products; they buy a better version of themselves.
+
+People buy what the product enables: confidence, relief, status, security, freedom, competence, belonging, or identity.
+
+Example:
+Customers do not buy a productivity app. They buy the feeling of being organized, dependable, and in control.
+
+Practical rule: Describe the person the customer becomes after using the product.
+
+### Copywriting Checklist
+
+Before publishing a sales message, ask:
+
+* Is the offer genuinely strong?
+* Does the headline clearly call out the right reader?
+* Is the desired outcome vivid and valuable?
+* Have I shown why the result is believable?
+* Have I reduced perceived time, effort, and risk?
+* Is the copy focused on the customer rather than the business?
+* Are the bullets specific, desirable, and curiosity-driven?
+* Have I replaced vague claims with concrete facts?
+* Does the message respect the reader's intelligence?
+* Is the mechanism distinct from competitors?
+* Am I selling the customer's transformation, not merely the product?
+
+### Core Principle
+
+The best copy makes a valuable offer feel relevant, credible, distinct, and personally meaningful—then makes the next step feel easy.
+
+
