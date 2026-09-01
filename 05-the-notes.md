@@ -357,6 +357,58 @@ Customers do not buy a productivity app. They buy the feeling of being organized
 
 Practical rule: Describe the person the customer becomes after using the product.
 
+### Modern Additions (AI & Social Era)
+
+Distilled from a synthesis of the ten lessons above against current research and platform guidance — the parts that weren't already covered.
+
+**11. Distinctive provenance beats fluent prose**
+
+In an AI-saturated market, generic fluency is cheap. What's scarce: first-hand experience, original data, a named point of view, verifiable specifics.
+
+Practical rule: State where the insight came from — a call, a test, a build — not just the conclusion.
+
+**12. Research the buyer-in-a-moment, not the demographic**
+
+A specific person, facing a specific trigger, trying to make a particular improvement, under particular constraints — not an age/role label. Learn their trigger, current method, alternatives considered, objections, and what evidence they'd need to believe you.
+
+Practical rule: Write from a real decision you observed, not an imagined persona.
+
+**13. Climb the proof ladder as the claim gets bigger**
+
+Explanation → concrete detail → demo → first-party data → independent corroboration (attributable case, real review) → risk-bearing commitment (trial, guarantee, SLA).
+
+Practical rule: Match evidence weight to how consequential, expensive, or unusual the claim is.
+
+**14. Match the CTA to buyer readiness**
+
+Unaware → watch/read/save. Problem-aware → compare/diagnose. Solution-aware → trial/demo. Ready → buy/subscribe. Existing customer → activate/refer.
+
+Practical rule: Don't ask for "buy now" from someone who just discovered the problem exists.
+
+**15. Run the sameness test**
+
+Delete the brand name. If the copy could describe three competitors, it lacks evidence, mechanism, or point of view.
+
+Practical rule: Add a constraint, a number, or a stance until it's no longer swappable.
+
+**16. Promise and delivery are one system now**
+
+In algorithmic/social distribution, a hook that overpromises can win a click but tank completion, retention, and future reach. The opening is a gate; the body must pay it off.
+
+Practical rule: Judge headlines by downstream engagement and conversion quality, not just click-through.
+
+**17. Use AI to research and edit, not to author claims**
+
+Use it to organize interviews, cluster objections, generate divergent angles, and flag vague or unsupported language. Keep claim selection, proof choice, and point of view human — and verify every number, quote, and comparison before publishing.
+
+Practical rule: If AI drafted it, a human must still be able to say exactly why each claim is true.
+
+**18. Don't fabricate proof, scarcity, or relationships**
+
+Manufactured testimonials, fake urgency, and undisclosed commercial relationships are unethical and, in the US, can be illegal under FTC rules on reviews and endorsements.
+
+Practical rule: Real, disclosed, and modest beats fake, hidden, and impressive.
+
 ### Copywriting Checklist
 
 Before publishing a sales message, ask:
