@@ -3,64 +3,64 @@
 ## Skills I use
 
 **Claude Code / config**
-- update-config, keybindings-help, fewer-permission-prompts, init, run, claude-api
+* update-config, keybindings-help, fewer-permission-prompts, init, run, claude-api
 
 **Code review**
-- code-review, simplify, security-review
+* code-review, simplify, security-review
 
 **Scheduling / automation**
-- loop, schedule
+* loop, schedule
 
 **Artifacts & data viz**
-- artifact-design, artifact-diagramming, artifact-capabilities, dataviz, design (Claude Design canvas)
+* artifact-design, artifact-diagramming, artifact-capabilities, dataviz, design (Claude Design canvas)
 
 **Document/office**
-- docx, pptx, xlsx, pdf
+* docx, pptx, xlsx, pdf
 
 **Anthropic misc**
-- consolidate-memory, explain-usage, import-memory, morning, schedule, setup-cowork, setup-writing-style, skill-creator
+* consolidate-memory, explain-usage, import-memory, morning, schedule, setup-cowork, setup-writing-style, skill-creator
 
 **Vercel**
-- bootstrap, deploy, env, marketplace, status, ai-gateway, ai-sdk, auth, chat-sdk, deployments-cicd, env-vars, knowledge-update, microfrontends, next-cache-components, next-forge, next-upgrade, nextjs, react-best-practices, routing-middleware, runtime-cache, shadcn, turbopack, vercel-agent, vercel-cli, vercel-connect, vercel-firewall, vercel-functions, vercel-sandbox, vercel-storage, verification, workflow
+* bootstrap, deploy, env, marketplace, status, ai-gateway, ai-sdk, auth, chat-sdk, deployments-cicd, env-vars, knowledge-update, microfrontends, next-cache-components, next-forge, next-upgrade, nextjs, react-best-practices, routing-middleware, runtime-cache, shadcn, turbopack, vercel-agent, vercel-cli, vercel-connect, vercel-firewall, vercel-functions, vercel-sandbox, vercel-storage, verification, workflow
 
 **Context7 (docs)**
-- context7, docs, context7-mcp, docs-researcher (agent)
+* context7, docs, context7-mcp, docs-researcher (agent)
 
 **Superpowers (workflow/process)**
-- brainstorming, dispatching-parallel-agents, executing-plans, finishing-a-development-branch, receiving-code-review, requesting-code-review, subagent-driven-development, systematic-debugging, test-driven-development, using-git-worktrees, using-superpowers, verification-before-completion, writing-plans, writing-skills
+* brainstorming, dispatching-parallel-agents, executing-plans, finishing-a-development-branch, receiving-code-review, requesting-code-review, subagent-driven-development, systematic-debugging, test-driven-development, using-git-worktrees, using-superpowers, verification-before-completion, writing-plans, writing-skills
 
 **UI/UX**
-- ui-ux-pro-max
+* ui-ux-pro-max
 
 **Ponytail** — forces the simplest/laziest solution that still works; question whether code needs to exist at all before writing it
-- ponytail, ponytail-review, ponytail-audit, ponytail-gain, ponytail-debt, ponytail-help
+* ponytail, ponytail-review, ponytail-audit, ponytail-gain, ponytail-debt, ponytail-help
 
 **Impeccable** — design fluency for frontend work: polish, audit, critique, animate, and 23 total commands for UI quality (`/impeccable polish`, `/impeccable audit`, etc.)
-- impeccable
+* impeccable
 
 **Sepia** — de-AI writing: makes AI-generated text read as human-written. Narrative-architecture repair for fiction (StoryScope, arXiv:2604.03136) plus domain modes for release notes, PR/issue replies, postmortems, tickets, and technical articles. Write, review, refactor, recreate. Source: [Nanako0129/sepia](https://github.com/Nanako0129/sepia)
-- sepia
+* sepia
 
 **Animation & Motion**
-- animate, animate-expo, animation-vocabulary, apple-design, find-animation-opportunities, improve-animations, review-animations, gsap-core, gsap-frameworks, gsap-performance, gsap-plugins, gsap-react, gsap-scrolltrigger, gsap-timeline, gsap-utils
+* animate, animate-expo, animation-vocabulary, apple-design, find-animation-opportunities, improve-animations, review-animations, gsap-core, gsap-frameworks, gsap-performance, gsap-plugins, gsap-react, gsap-scrolltrigger, gsap-timeline, gsap-utils
 
 **Design / UI (frontend & visual)**
-- design-taste-frontend, design-taste-frontend-v1, hallmark, high-end-visual-design, minimalist-ui, industrial-brutalist-ui, gpt-taste, stitch-design-taste, redesign-existing-projects, emil-design-eng
+* design-taste-frontend, design-taste-frontend-v1, hallmark, high-end-visual-design, minimalist-ui, industrial-brutalist-ui, gpt-taste, stitch-design-taste, redesign-existing-projects, emil-design-eng
 
 **Image generation**
-- brandkit, imagegen-frontend-mobile, imagegen-frontend-web, image-to-code
+* brandkit, imagegen-frontend-mobile, imagegen-frontend-web, image-to-code
 
 **Video / HyperFrames**
-- hyperframes, hyperframes-animation, hyperframes-cli, hyperframes-core, hyperframes-creative, hyperframes-keyframes, hyperframes-registry, general-video, media-use
+* hyperframes, hyperframes-animation, hyperframes-cli, hyperframes-core, hyperframes-creative, hyperframes-keyframes, hyperframes-registry, general-video, media-use
 
 **Toasts / notifications**
-- ask-sonner, telegram-notify
+* ask-sonner, telegram-notify
 
 **Writing / language**
-- speak-human-zh-tw, full-output-enforcement
+* speak-human-zh-tw, full-output-enforcement
 
 **Swift**
-- write-swift
+* write-swift
 
 **graphify** — turns any input (code, docs, papers, images, videos) into a persistent knowledge graph with god nodes, community detection, and query/path/explain tools
 
@@ -72,7 +72,7 @@
 
 Notes I give AI tools when asking them to write or edit prose, kept in the language I originally wrote them in (Traditional Chinese).
 
-# 核心撰寫原則
+### 核心撰寫原則
 
 1. **請勿憑空捏造任何內容**
 
@@ -144,86 +144,85 @@ A deletion must not become a constraint. A correction must not leak into the art
 
 **Deletion is not prohibition. Correction should leave no residue.**
 
-
 ## CLAUDE.md preset
 
 @AGENTS.md
 
-# Rules for Coding
+### Rules for Coding
 
-## Prime Directive
+#### Prime Directive
 
 **There is nothing so useless as doing efficiently that which should not be done at all.**
 
 Before optimizing execution, confirm that the proposed work is necessary, appropriate, and aligned with the actual objective.
 
-## 1. Read Before You Write
+#### 1. Read Before You Write
 
 Inspect the relevant files, code, configuration, documentation, and surrounding context before making changes.
 
 Do not modify code you have not first understood in context.
 
-## 2. Understand Before You Modify
+#### 2. Understand Before You Modify
 
 Determine what the existing system does, why it behaves that way, and what constraints it operates under before proposing a change.
 
 Do not treat symptoms without understanding the underlying behavior.
 
-## 3. State Assumptions Explicitly
+#### 3. State Assumptions Explicitly
 
 When information is uncertain or incomplete, state the assumption being made before acting on it.
 
 Do not silently convert uncertainty into fact.
 
-## 4. Do Not Invent Architecture
+#### 4. Do Not Invent Architecture
 
 Work with the architecture that actually exists.
 
 Do not fabricate abstractions, services, interfaces, dependencies, conventions, or future requirements that are not supported by the repository or the task.
 
-## 5. Prefer the Smallest Correct Change
+#### 5. Prefer the Smallest Correct Change
 
 Make the simplest change that fully solves the problem.
 
 Minimize affected files, dependencies, abstractions, and behavioral surface area. Complexity requires justification.
 
-## 6. Do Not Refactor for Display
+#### 6. Do Not Refactor for Display
 
 Do not rewrite, restructure, generalize, or modernize unrelated code merely to demonstrate sophistication.
 
 Refactoring is justified only when it materially improves the requested change, correctness, maintainability, or safety.
 
-## 7. Every Change Must Be Explainable
+#### 7. Every Change Must Be Explainable
 
 Each meaningful action should have a clear reason tied to evidence, requirements, or an identified problem.
 
 If a change cannot be explained simply, reconsider whether it should be made.
 
-## 8. Verify the Result, Not Just the Edit
+#### 8. Verify the Result, Not Just the Edit
 
 After making changes, inspect the resulting behavior and output.
 
 Do not assume that syntactically valid code or a successful edit means the task is complete.
 
-## 9. Test Before Delivery
+#### 9. Test Before Delivery
 
 Run the relevant tests, checks, builds, linters, type checks, or validation commands before declaring the work complete.
 
 If verification cannot be performed, state exactly what was not verified and why.
 
-## 10. Learn From Repeated Failures
+#### 10. Learn From Repeated Failures
 
 When the same class of error occurs more than once, record the lesson and adjust the approach so it is not repeated.
 
 Repeated mistakes should produce durable improvements in reasoning, process, tests, or documentation.
 
-## 11. Preserve What Does Not Need to Change
+#### 11. Preserve What Does Not Need to Change
 
 Treat existing working behavior as a constraint.
 
 Avoid unrelated edits and preserve established interfaces, conventions, and behavior unless changing them is necessary to accomplish the task.
 
-## 12. Completion Requires Evidence
+#### 12. Completion Requires Evidence
 
 A task is complete only when:
 
@@ -377,5 +376,3 @@ Before publishing a sales message, ask:
 ### Core Principle
 
 The best copy makes a valuable offer feel relevant, credible, distinct, and personally meaningful—then makes the next step feel easy.
-
-

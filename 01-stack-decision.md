@@ -40,11 +40,11 @@ This is the default stack worth shipping and scaling a serious SaaS on, before i
 
 ## 4. Architecture doctrine
 
-* Prefer one system of record. Postgres should own durable application data wherever practical.  
-* Do not introduce a specialist database until the general-purpose database fails a measured requirement.  
-* Keep synchronous request paths short. Move email, embeddings, file processing, reports, and long-running AI work into queues/workflows.  
-* Add infrastructure in response to load, reliability, or product requirements — not anticipated scale.  
-* Optimize for reversibility. A boring, portable Postgres-centered architecture is usually preferable to an elegant proprietary abstraction.  
+* Prefer one system of record. Postgres should own durable application data wherever practical.
+* Do not introduce a specialist database until the general-purpose database fails a measured requirement.
+* Keep synchronous request paths short. Move email, embeddings, file processing, reports, and long-running AI work into queues/workflows.
+* Add infrastructure in response to load, reliability, or product requirements — not anticipated scale.
+* Optimize for reversibility. A boring, portable Postgres-centered architecture is usually preferable to an elegant proprietary abstraction.
 * Every vendor has a carrying cost: SDKs, secrets, webhooks, billing, outages, permissions, monitoring, and data synchronization.
 
 ## 5. Background jobs: the one capability to plan deliberately
@@ -62,22 +62,22 @@ Async execution is more important than another database. Typical workloads inclu
 
 **Core — ship with this**
 
-* Claude / Codex  
-* GitHub  
-* Vercel  
-* Supabase  
-* Stripe  
-* Resend  
-* Cloudflare  
+* Claude / Codex
+* GitHub
+* Vercel
+* Supabase
+* Stripe
+* Resend
+* Cloudflare
 * PostHog
 
 **Optional — add only when the trigger is real**
 
-* Clerk — B2B identity  
-* Sentry — deep observability  
-* Upstash — Redis workloads  
-* Pinecone — vector scale  
-* ProductBridge — feedback volume  
+* Clerk — B2B identity
+* Sentry — deep observability
+* Upstash — Redis workloads
+* Pinecone — vector scale
+* ProductBridge — feedback volume
 * R2 — object-storage economics
 
 > **Operating rule.** Start with the smallest stack that can safely ship the product. Add a vendor only when it removes a measured constraint or creates a product advantage larger than its ongoing operational cost.

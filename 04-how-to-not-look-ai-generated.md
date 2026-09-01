@@ -10,10 +10,10 @@ An AI aesthetic often feels statistically plausible, highly organized, superfici
 
 Before deciding how the piece looks, decide what it is trying to say.
 
-* What is surprising?  
-* What is uncomfortable?  
-* What deserves disproportionate attention?  
-* What can be removed?  
+* What is surprising?
+* What is uncomfortable?
+* What deserves disproportionate attention?
+* What can be removed?
 * What should the reader remember five minutes later?
 
 Without a strong editorial position, the design tool has to invent one. Automated systems tend to fill that vacuum with familiar conventions.
@@ -24,10 +24,10 @@ Without a strong editorial position, the design tool has to invent one. Automate
 
 A common AI-looking pattern is hierarchy that appears to exist because hierarchy is expected:
 
-* Two-color headlines  
-* One arbitrary phrase in an accent color  
-* A highlighted keyword in every title  
-* Eyebrow label \+ enormous headline \+ supporting paragraph  
+* Two-color headlines
+* One arbitrary phrase in an accent color
+* A highlighted keyword in every title
+* Eyebrow label \+ enormous headline \+ supporting paragraph
 * Repeated "important" words with no meaningful difference in importance
 
 The problem is unearned emphasis. If everything follows the same hierarchy regardless of subject matter, the hierarchy is decorative rather than communicative.
@@ -64,11 +64,11 @@ Do not accept generated typography merely because it is legible. Inspect font ch
 
 A convincing whole can conceal weak local decisions. Inspect relationships individually:
 
-* Why is this aligned to that?  
-* Why is this element larger?  
-* Why is this gap 48 pixels rather than 16?  
-* Why does this component exist?  
-* Why does this information appear here?  
+* Why is this aligned to that?
+* Why is this element larger?
+* Why is this gap 48 pixels rather than 16?
+* Why does this component exist?
+* Why does this information appear here?
 * Why are these two things grouped?
 
 > **Principle:** Every local relationship should survive questioning.
@@ -200,4 +200,3 @@ AI naturally produces orderly hierarchy, consistent components, balanced spacing
 Increase the number of decisions that originate in the specific idea.
 
 > Authorship means: the work could not have looked exactly this way if it had been about something else. That is the standard.
-
